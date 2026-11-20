@@ -112,8 +112,8 @@ with st.sidebar:
         st.success(f"**Live AI** via OpenRouter\n\n`{settings.models[0]}`\n\n+{fallbacks} fallback models")
     else:
         st.info(
-            "**Demo mode**: saved AI analyses for the sample ideas.\n\n"
-            "Add `OPENROUTER_API_KEY` to analyse your own idea."
+            "**Demo mode**: every figure is computed live; saved AI analyses are included for some sample ideas.\n\n"
+            "Add `OPENROUTER_API_KEY` (see README) to run the AI analyst on any idea."
         )
     st.selectbox("Load an idea", SAMPLE_NAMES + [BLANK], key="sample_choice", on_change=_load_choice)
 
@@ -199,7 +199,13 @@ elif freshness == "numbers_changed":
 elif settings.live:
     note_col.caption("Two calls to free OpenRouter models, usually 30-90 seconds. Results are cached.")
 else:
-    note_col.caption("Demo mode: AI analysis is available for the unchanged sample ideas.")
+    note_col.caption("Demo mode: the AI analysis runs once an OpenRouter key is configured. All figures below are "
+                     "computed.")
+
+NO_KEY_HINT = (
+    "The AI analysis runs once an OpenRouter key is configured: add `OPENROUTER_API_KEY` "
+    "(see README → Quick start), then click **Run AI analysis**."
+)
 
 # ------------------------------------------------------------------------- headline
 kpis = st.columns(6)
@@ -242,7 +248,7 @@ with tabs[0]:
         rows.append([LABELS[key], score_bar(value), scorecard.source(key), reason])
     if not scorecard.complete:
         for key in AI_JUDGED:
-            rows.append([LABELS[key], score_bar(None), "AI analyst", "Run the AI analysis to score this dimension."])
+            rows.append([LABELS[key], score_bar(None), "AI analyst", "Scored when the AI analysis runs."])
     table(["Dimension", "Score", "Source", "Why"], rows, html_cols=(1,))
 
 # -------------------------------------------------------------------- unit economics
@@ -314,7 +320,9 @@ with tabs[4]:
 # ----------------------------------------------------------------------- AI analysis
 with tabs[5]:
     if assessment is None:
-        st.info("Run the AI analysis to see the competitive landscape, SWOT, risks and investor questions.")
+        lead = "Click **Run AI analysis** above." if settings.live else NO_KEY_HINT
+        st.info(f"{lead}\n\nFor this idea the analyst produces: the competitive landscape, a SWOT, key risks with "
+                "mitigations, the questions an investor will ask and cheap experiments to validate demand.")
     else:
         st.markdown(f"#### {assessment.one_liner}")
         st.markdown(f"**Target customer:** {assessment.target_customer}  \n"
@@ -353,8 +361,8 @@ with tabs[6]:
         with st.container(border=True):
             st.markdown(re.sub(r"^#{1,3} ", "#### ", memo, flags=re.M))
     else:
-        st.info("Run the AI analysis to generate the investment memo. The report below still includes every "
-                "computed figure.")
+        lead = "Click **Run AI analysis** above to write the investment memo." if settings.live else NO_KEY_HINT
+        st.info(f"{lead}\n\nThe downloadable report below already includes every computed figure.")
     report = build_report(idea, a, m, c, scorecard, assessment, memo, analysis["model"] if analysis else None)
     st.download_button(
         "⬇️ Download full report (Markdown)", report, file_name=f"{idea.name}-venturelens-report.md",

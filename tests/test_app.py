@@ -34,3 +34,15 @@ def test_changing_an_assumption_updates_the_model():
     at.number_input(key="cac").set_value(10_000.0).run()
     after = next(m.value for m in at.metric if m.label == "LTV : CAC")
     assert before != after
+
+
+def test_demo_mode_without_key_explains_setup(monkeypatch):
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
+    at = AppTest.from_file("../app.py", default_timeout=60)
+    at.secrets["OPENROUTER_API_KEY"] = ""
+    at.run()
+    assert not at.exception, at.exception
+    at.selectbox(key="sample_choice").set_value("GreenFleet").run()
+    assert not at.exception, at.exception
+    assert any("OPENROUTER_API_KEY" in box.value for box in at.info)
+    assert at.button[0].disabled  # Run AI analysis needs a key

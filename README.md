@@ -107,7 +107,7 @@ OpenRouter's free models are rate-limited, so the client in `venturelens/llm.py`
 - tries a list of models in order and **skips a busy model** instead of retrying it, saving the daily quota;
 - **caches** every successful reply on disk, keyed by a hash of the request, so a repeat run costs nothing;
 - validates JSON against the schema and **repairs once** when a reply is malformed or cut off;
-- powers a **demo mode**: saved analyses of the sample ideas let anyone explore the app without a key.
+- powers a **demo mode**: every figure works without a key, and saved AI analyses of sample ideas show what the analyst produces.
 
 ## Quick start
 
