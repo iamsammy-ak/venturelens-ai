@@ -1,0 +1,123 @@
+{
+  "fingerprint": "96907f4a58bf5e97",
+  "idea_fingerprint": "0f29916e513965ec",
+  "assessment": {
+    "one_liner": "ShiftPilot uses AI to forecast restaurant covers and build compliant staff rotas, cutting overstaffing and last-minute gaps for independent Italian hospitality venues.",
+    "target_customer": "Independent restaurants and bars with 5-40 staff in Italy, expanding to Southern Europe.",
+    "value_proposition": "AI-driven cover forecasting from bookings, weather and local events, plus rota generation that respects Italian labour contracts, reducing overstaffing and staffing gaps.",
+    "problem_urgency": {
+      "score": 7.5,
+      "rationale": "Scheduling is a weekly, time-consuming pain for thin-margin restaurateurs, but it is rarely an existential daily crisis."
+    },
+    "competitive_position": {
+      "score": 6.0,
+      "rationale": "Established scheduling tools exist, but none dominate Italy with AI cover forecasting and CCNL-specific compliance."
+    },
+    "defensibility": {
+      "score": 5.5,
+      "rationale": "Proprietary forecasting data and integration switching costs build over time, but there are no strong network effects."
+    },
+    "execution_feasibility": {
+      "score": 5.0,
+      "rationale": "Combining AI forecasting, Italian labour-rule encoding and POS integrations is demanding for a small seed team."
+    },
+    "competitors": [
+      {
+        "name": "7shifts",
+        "kind": "direct",
+        "note": "Restaurant-focused scheduling and labour compliance; strong in North America, limited presence in Italy."
+      },
+      {
+        "name": "Deputy",
+        "kind": "direct",
+        "note": "General workforce management with scheduling and timesheets; broad SMB focus, not Italian-labour specific."
+      },
+      {
+        "name": "Sling",
+        "kind": "direct",
+        "note": "Low-cost shift scheduling for small businesses; lacks AI forecasting and local compliance depth."
+      },
+      {
+        "name": "Fourth (HotSchedules)",
+        "kind": "direct",
+        "note": "Enterprise restaurant labour and scheduling; expensive and overbuilt for 5-40 staff independents."
+      },
+      {
+        "name": "Excel and paper rotas",
+        "kind": "substitute",
+        "note": "The incumbent method for most independent Italian restaurants; low switching cost but high manual effort."
+      }
+    ],
+    "swot": {
+      "strengths": [
+        "Vertical AI forecasting for covers using bookings, weather and local events",
+        "Built-in Italian labour rule (CCNL) awareness reduces compliance risk",
+        "Direct labour cost savings appeal to thin-margin independents"
+      ],
+      "weaknesses": [
+        "No existing brand or channel into fragmented Italian restaurant market",
+        "Small seed team cannot quickly build POS/payroll integrations",
+        "Forecast accuracy depends on customer data that does not yet exist"
+      ],
+      "opportunities": [
+        "Expand to Spain, Portugal and Greece after proving product in Italy",
+        "Become the scheduling layer integrated with Italian POS and payroll providers",
+        "Offer premium features like overtime optimization and split-shift compliance"
+      ],
+      "threats": [
+        "Established scheduling platforms localize for Italy and outspend on acquisition",
+        "Independent restaurants cut SaaS spend during economic downturns",
+        "Hospitality staffing shortages reduce demand for scheduling optimization"
+      ]
+    },
+    "risks": [
+      {
+        "risk": "Italian CCNL labour contracts vary by region and role, making rule encoding complex.",
+        "severity": "high",
+        "mitigation": "Partner with Italian labour consultants and encode rules incrementally by contract type."
+      },
+      {
+        "risk": "Low digital adoption among independent restaurateurs slows onboarding.",
+        "severity": "medium",
+        "mitigation": "Provide white-glove migration, mobile-first UI, and Italian-language support."
+      },
+      {
+        "risk": "Forecasting requires historical POS data that customers may not share or have.",
+        "severity": "medium",
+        "mitigation": "Seed models with public weather/event data and allow manual calibration until sufficient history accumulates."
+      },
+      {
+        "risk": "Established scheduling SaaS enter Italy with localized compliance.",
+        "severity": "high",
+        "mitigation": "Own the Italian compliance niche first and build switching costs through payroll/POS integration."
+      },
+      {
+        "risk": "Fragmented Italian POS ecosystem makes integration costly.",
+        "severity": "medium",
+        "mitigation": "Start with CSV import and manual data entry; prioritize integrations only after paying pilot customers."
+      },
+      {
+        "risk": "Seasonal restaurant closures cause churn and revenue volatility.",
+        "severity": "medium",
+        "mitigation": "Offer seasonal pause pricing and annual contracts with off-season discounts."
+      }
+    ],
+    "investor_questions": [
+      "How will you encode and stay current with the regional variations in Italian CCNL labour contracts?",
+      "What is your customer acquisition strategy for reaching thousands of fragmented independent restaurants in Italy?",
+      "Which Italian POS and payroll systems will you integrate with first, and what is the build timeline?",
+      "How accurate can cover forecasts be during the cold-start phase before you have customer POS history?",
+      "What prevents a larger scheduling platform from localizing for Italy and outspending you on CAC?"
+    ],
+    "validation_experiments": [
+      "Conduct 10 discovery interviews with independent restaurant and bar managers in Milan and Rome to validate scheduling pain and willingness to pay.",
+      "Launch an Italian-language landing page and drive targeted Meta ads to independent restaurateurs to measure email signup conversion.",
+      "Offer a free manual labour-cost audit to five restaurants using their historical rota data to quantify potential savings.",
+      "Post in Italian hospitality owner Facebook groups and forums to gauge interest and collect pre-launch waitlist signups.",
+      "Run a concierge MVP: manually build AI-style rotas for two to three restaurants using their bookings and weather data, then measure time saved versus their current process."
+    ]
+  },
+  "memo": "## Summary\nShiftPilot is an AI staff scheduling SaaS for independent restaurants and bars with 5–40 staff, launching in Italy before expanding to Southern Europe. It forecasts covers from bookings, weather, and local events, then builds rotas that respect Italian labour contracts (CCNL), targeting reduced overstaffing and last-minute gaps. Business model is subscription (SaaS). VentureLens score: 6.1 / 10; verdict: Promising: validate the key assumptions.\n\n## Opportunity\nTarget customers are independent restaurants and bars with 5–40 staff in Italy, expanding to Southern Europe. Bottom-up market sizing: TAM €284.4M, SAM €71.1M, SOM €2.1M. Problem urgency is 7.5/10: scheduling is a weekly, time-consuming pain for thin-margin restaurateurs, though rarely an existential daily crisis. Competitive position is 6.0/10: established scheduling tools exist, but none dominate Italy with AI cover forecasting and CCNL-specific compliance. Direct competitors include 7shifts, Deputy, Sling, and Fourth (HotSchedules); Excel and paper rotas remain the incumbent substitute.\n\n## Business model and unit economics\nRevenue per customer per month: €79. Gross margin: 80%. Customer acquisition cost: €450. Monthly churn: 2.5%. Customer lifetime value (LTV): €2.5k. LTV to CAC: 5.6×. CAC payback: 7.1 months. Defensibility is 5.5/10: proprietary forecasting data and integration switching costs build over time, but there are no strong network effects. Execution feasibility is 5.0/10: combining AI forecasting, Italian labour-rule encoding, and POS integrations is demanding for a small seed team.\n\n## Financial outlook\nFixed costs per month at launch: €22k. Starting cash: €400k. Projection horizon: 36 months. Sustained break-even: Not within 36 months. Extra funding needed to stay cash-positive: €408k. Customers at end of horizon: 2,850. Annual recurring revenue at end of horizon: €2.7M.\n\n## Key risks\n- Italian CCNL labour contracts vary by region and role, making rule encoding complex (high severity).\n- Established scheduling SaaS enter Italy with localized compliance (high severity).\n- Low digital adoption among independent restaurateurs slows onboarding (medium).\n- Forecasting requires historical POS data that customers may not share or have (medium).\n- Fragmented Italian POS ecosystem makes integration costly (medium).\n- Seasonal restaurant closures cause churn and revenue volatility (medium).\n\nSuggested mitigations include partnering with Italian labour consultants, owning the Italian compliance niche first, white-glove migration with mobile-first UI and Italian-language support, seeding models with public weather/event data, starting with CSV import, and offering seasonal pause pricing.\n\n## Recommendation\nProceed with a seed investment conditional on validating key assumptions. Priorit",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "generated_at": "2026-11-20T02:00:28+00:00"
+}

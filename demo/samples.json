@@ -1,0 +1,80 @@
+[
+  {
+    "idea": {
+      "name": "StudyNest",
+      "description": "A verified housing marketplace for international students in Italian university cities. Landlords pay a monthly listing subscription and get pre-screened student tenants; students get verified listings, video viewings and contracts in English.",
+      "target_customer": "Small landlords renting rooms to university students",
+      "geography": "Italy (Turin, Milan, Bologna to start)",
+      "business_model": "Marketplace (take rate)"
+    },
+    "assumptions": {
+      "arpu_monthly": 35.0,
+      "gross_margin": 0.85,
+      "cac": 120.0,
+      "monthly_churn": 0.04,
+      "starting_customers": 0,
+      "new_customers_month1": 30,
+      "new_customer_growth": 0.07,
+      "fixed_costs_monthly": 12000.0,
+      "fixed_cost_growth": 0.015,
+      "starting_cash": 180000.0
+    },
+    "market": {
+      "potential_customers": 150000,
+      "serviceable_share": 0.35,
+      "obtainable_share": 0.04
+    }
+  },
+  {
+    "idea": {
+      "name": "ShiftPilot",
+      "description": "AI staff scheduling for independent restaurants and bars. It forecasts covers from bookings, weather and local events, then builds rotas that respect contracts and labour rules, cutting overstaffing and last-minute gaps.",
+      "target_customer": "Independent restaurants and bars with 5-40 staff",
+      "geography": "Italy, then Southern Europe",
+      "business_model": "Subscription (SaaS)"
+    },
+    "assumptions": {
+      "arpu_monthly": 79.0,
+      "gross_margin": 0.8,
+      "cac": 450.0,
+      "monthly_churn": 0.025,
+      "starting_customers": 0,
+      "new_customers_month1": 15,
+      "new_customer_growth": 0.09,
+      "fixed_costs_monthly": 22000.0,
+      "fixed_cost_growth": 0.02,
+      "starting_cash": 400000.0
+    },
+    "market": {
+      "potential_customers": 300000,
+      "serviceable_share": 0.25,
+      "obtainable_share": 0.03
+    }
+  },
+  {
+    "idea": {
+      "name": "GreenFleet",
+      "description": "Charging and energy-cost optimisation software for logistics SMEs moving their van fleets to electric. It schedules charging around routes and electricity prices and reports the cost per delivery against diesel.",
+      "target_customer": "Logistics SMEs running 10-200 delivery vans",
+      "geography": "European Union",
+      "business_model": "Subscription (SaaS)"
+    },
+    "assumptions": {
+      "arpu_monthly": 420.0,
+      "gross_margin": 0.72,
+      "cac": 3500.0,
+      "monthly_churn": 0.015,
+      "starting_customers": 0,
+      "new_customers_month1": 4,
+      "new_customer_growth": 0.1,
+      "fixed_costs_monthly": 35000.0,
+      "fixed_cost_growth": 0.02,
+      "starting_cash": 900000.0
+    },
+    "market": {
+      "potential_customers": 120000,
+      "serviceable_share": 0.2,
+      "obtainable_share": 0.02
+    }
+  }
+]

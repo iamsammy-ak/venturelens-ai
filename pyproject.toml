@@ -1,0 +1,17 @@
+[project]
+name = "venturelens-ai"
+version = "0.1.0"
+description = "AI startup evaluator: unit economics, market sizing, a weighted scorecard and an investment memo."
+requires-python = ">=3.10"
+license = "MIT"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
